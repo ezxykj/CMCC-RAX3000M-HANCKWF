@@ -12,6 +12,7 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/10.10.10.13/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.6.1/10.10.10.13/g' package/base-files/files/bin/config_generate
 
 # change the login password
 sed -i 's/root:::0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' package/base-files/files/etc/shadow
