@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build cmcc-rax3000m
+name: Build cmcc_rax3000m
 
 on:
   repository_dispatch:
@@ -25,15 +25,15 @@ env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x.git
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: cmcc-rax3000m.config
+  CONFIG_FILE: cmcc_rax3000m.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   TZ: Asia/Shanghai
-  DEVICE: cmcc-rax3000m
+  DEVICE: cmcc_rax3000m
   UPLOAD_OUTPUT: true
 
 jobs:
-   _rax3000m:
+   _:
     runs-on: ubuntu-20.04
     permissions:
       contents: write
