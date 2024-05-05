@@ -22,7 +22,7 @@ sed -i 's/root::0:0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Modify hostname
-sed -i 's/ImmortalWrt/cmcc_rax3000m/g' package/base-files/files/bin/config_generate
+sed -i 's/ImmortalWrt/CMCC_RAX3000M/g' package/base-files/files/bin/config_generate
 
 #修改wifi名称（mtwifi-cfg）
 sed -i 's/ImmortalWrt-2.4G/XYKJ/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
