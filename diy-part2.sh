@@ -17,7 +17,7 @@ sed -i 's/192.168.1.1/10.10.10.13/g' package/base-files/files/bin/config_generat
 sed -i 's/root:::0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 # Modify default theme
-#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Modify hostname
 sed -i 's/ImmortalWrt/rax3000m_256m/g' package/base-files/files/bin/config_generate
