@@ -27,3 +27,18 @@ sed -i 's/ImmortalWrt/RAX3000M/g' package/base-files/files/bin/config_generate
 #修改wifi名称（mtwifi-cfg）
 sed -i 's/ImmortalWrt-2.4G/XYKJ/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
 sed -i 's/ImmortalWrt-5G/XYKJ/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+
+# 添加openclash
+rm -rf package/feeds/luci/luci-app-openclash
+rm -rf feeds/luci/applications/luci-app-openclash
+mkdir package/openclash
+cd package/openclash
+git init
+git remote add origin https://github.com/vernesong/OpenClash.git
+git config core.sparsecheckout true
+echo "luci-app-openclash" >> .git/info/sparse-checkout
+git pull --depth 1 origin master
+git branch --set-upstream-to=origin/master master
+mv luci-app-openclash ../
+cd ../../
+rm -rf package/openclash
