@@ -21,6 +21,10 @@ sed -i 's/root::0:0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99
 # 默认主题argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
+# 更改IP后TTYD不能访问以及外网访问
+sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init
+sed '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
+
 #修改wifi名称（mtwifi-cfg）
 #sed -i 's/ImmortalWrt-2.4G/XYKJ/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
 #sed -i 's/ImmortalWrt-5G/XYKJ/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
@@ -39,12 +43,6 @@ git branch --set-upstream-to=origin/master master
 mv luci-app-openclash ../
 cd ../../
 rm -rf package/openclash
-
-#删除冲突的软件包
-#rm -rf ./package/istore
-#rm -rf ./feeds/kenzo/luci-app-quickstart
-#rm -rf ./feeds/kenzo/luci-app-store
-#rm -rf ./feeds/kenzo/luci-lib-taskd
 
 #修改闪存为256M版本(这是针对原厂128闪存来的，但又要编译256M固件来的）
 #sed -i 's/<0x580000 0x7200000>/<0x580000 0xee00000>/g' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dts
