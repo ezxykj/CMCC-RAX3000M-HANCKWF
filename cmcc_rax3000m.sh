@@ -15,12 +15,15 @@ sed -i 's/192.168.1.1/172.16.0.1/g' package/base-files/files/bin/config_generate
 sed -i 's/255.255.255.0/255.240.0.0/g' package/base-files/files/bin/config_generate
 sed -i 's/ImmortalWrt/HOME/g' package/base-files/files/bin/config_generate
 
-# change the login password
-
+# 修改登录密码为ezxykj
 sed -i 's/root::0:0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 # Modify default theme
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+
+# 更改IP后TTYD不能访问以及外网访问
+sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init
+sed '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
 
 #修改wifi名称（mtwifi-cfg）
 #sed -i 's/ImmortalWrt-2.4G/XYKJ/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
