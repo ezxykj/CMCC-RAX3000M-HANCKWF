@@ -23,7 +23,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 
 # 更改IP后TTYD不能访问以及外网访问
 sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init
-sed -i '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
+#sed -i '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
 #sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 
 #修改wifi名称（mtwifi-cfg）
