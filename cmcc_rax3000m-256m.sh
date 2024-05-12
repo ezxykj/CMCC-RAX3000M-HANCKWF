@@ -44,3 +44,7 @@ git branch --set-upstream-to=origin/master master
 mv luci-app-openclash ../
 cd ../../
 rm -rf package/openclash
+
+# 修改frp版本
+sed -i '/PKG_VERSION:=/c\PKG_VERSION:=0.58.0' feeds/packages/net/frp/Makefile
+sed -i '/PKG_HASH:=/c\PKG_HASH:=2428ED4D9DF6F2BE29D006C5FCDEB526B86A137FA007A396AF9B9D28EA3CEE60' feeds/packages/net/frp/Makefile
