@@ -22,7 +22,7 @@ sed -i 's/root::0:0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # 更改IP后TTYD不能访问以及外网访问
-sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init
+#sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init    //更改IP后无法连接，重启路由器或重启ttyd,这条执行后，ipv6不能用
 #sed -i '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
 #sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 
