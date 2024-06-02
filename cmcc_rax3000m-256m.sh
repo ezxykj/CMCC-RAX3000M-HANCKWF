@@ -47,4 +47,4 @@ rm -rf package/openclash
 
 # 修改frp版本
 sed -i '/PKG_VERSION:=/c\PKG_VERSION:=0.58.0' feeds/packages/net/frp/Makefile
-sed -i '/PKG_HASH:=/c\PKG_HASH:=2428ED4D9DF6F2BE29D006C5FCDEB526B86A137FA007A396AF9B9D28EA3CEE60' feeds/packages/net/frp/Makefile
+sed -i '/PKG_HASH:=/c\PKG_HASH:=2428ed4d9df6f2be29d006c5fcdeb526b86a137fa007a396af9b9d28ea3cee60' feeds/packages/net/frp/Makefile
