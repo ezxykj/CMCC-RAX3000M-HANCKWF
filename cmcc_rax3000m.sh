@@ -47,7 +47,7 @@ rm -rf package/openclash
 
 rm -rf feeds/packages/lang/golang
 mv files/golang feeds/packages/lang/
-rm -rf feeds/packages/net/frp/*
-mv files/Makefile feeds/packages/net/frp/
+# rm -rf feeds/packages/net/frp/*
+# mv files/Makefile feeds/packages/net/frp/
 sed -i '/PKG_VERSION:=/c\PKG_VERSION:=0.58.1' feeds/packages/net/frp/Makefile
 sed -i '/PKG_HASH:=/c\PKG_HASH:=c6eabdc2bf39bdb4a7ab7794a4b2ad94be5e0cab50b6cc540a6431e61208b1e6' feeds/packages/net/frp/Makefile
