@@ -30,7 +30,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: cmcc_rax3000m-emmc.config
   DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: cmcc_rax3000m-emmc.sh
+  DIY_P2_SH: diy-part2.sh
   TZ: Asia/Shanghai
   DEVICE: cmcc_rax3000m-emmc
   UPLOAD_OUTPUT: true
