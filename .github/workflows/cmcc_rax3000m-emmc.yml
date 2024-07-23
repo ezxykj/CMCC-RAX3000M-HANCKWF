@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build cmcc_rax3000m
+name: Build cmcc_rax3000m-emmc
 
 on:
   repository_dispatch:
