@@ -11,9 +11,9 @@
 #
 
 # 修改IP(B类地址)和主机名
-sed -i 's/192.168.6.1/172.16.0.1/g' package/base-files/files/bin/config_generate
-sed -i 's/255.255.255.0/255.240.0.0/g' package/base-files/files/bin/config_generate
-sed -i 's/ImmortalWrt/HOME/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.6.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/255.255.255.0/255.0.0.0/g' package/base-files/files/bin/config_generate
+# sed -i 's/ImmortalWrt/HOME/g' package/base-files/files/bin/config_generate
 
 # 修改登录密码为ezxykj
 sed -i 's/root::0:0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' package/base-files/files/etc/shadow
