@@ -147,6 +147,6 @@ jobs:
         tag: "${{ env.DEVICE }}--${{ env.FILE_DATE }}"
         artifacts: "openwrt/bin/targets/*/*/*"
         body: |
-          # 已测试×
+          # 已测试
           
-          IP: 172.16.0.1 | Password: ezxykj
+          IP: 10.0.0.1 | Password: ezxykj
