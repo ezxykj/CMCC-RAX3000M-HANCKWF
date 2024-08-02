@@ -60,3 +60,5 @@ sed -i '/PKG_HASH:=/c\PKG_HASH:=c6eabdc2bf39bdb4a7ab7794a4b2ad94be5e0cab50b6cc54
 # 修改appfilter
 rm -rf feeds/luci/applications/luci-app-appfilter
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+
+# 添加cmcc-rax3000m-256m
