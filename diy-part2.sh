@@ -57,9 +57,9 @@ chmod -R 755 feeds/luci/applications/luci-app-frpc/
 sed -i '/PKG_VERSION:=/c\PKG_VERSION:=0.58.1' feeds/packages/net/frp/Makefile
 sed -i '/PKG_HASH:=/c\PKG_HASH:=c6eabdc2bf39bdb4a7ab7794a4b2ad94be5e0cab50b6cc540a6431e61208b1e6' feeds/packages/net/frp/Makefile
 
-# 修改appfilter
-# rm -rf feeds/luci/applications/luci-app-appfilter
-# git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+# 修改appfilter->oaf
+rm -rf feeds/luci/applications/luci-app-appfilter
+git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 添加cmcc-rax3000m-256m
 mv files/mt7981-cmcc-rax3000m-256m.dts target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
