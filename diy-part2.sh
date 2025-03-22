@@ -54,8 +54,8 @@ mv files/Makefile feeds/packages/net/frp/
 rm -rf feeds/luci/applications/luci-app-frpc
 mv files/luci-app-frpc feeds/luci/applications/
 chmod -R 755 feeds/luci/applications/luci-app-frpc/
-sed -i '/PKG_VERSION:=/c\PKG_VERSION:=0.61.0' feeds/packages/net/frp/Makefile
-sed -i '/PKG_HASH:=/c\PKG_HASH:=c06a11982ef548372038ec99a6b01cf4f7817a9b88ee5064e41e5132d0ccb7e1' feeds/packages/net/frp/Makefile
+sed -i '/PKG_VERSION:=/c\PKG_VERSION:=0.61.2' feeds/packages/net/frp/Makefile
+sed -i '/PKG_HASH:=/c\PKG_HASH:=19600d944e05f7ed95bac53c18cbae6ce7eff859c62b434b0c315ca72acb1d3c' feeds/packages/net/frp/Makefile
 
 # 修改appfilter->oaf
 #rm -rf feeds/luci/applications/luci-app-appfilter
