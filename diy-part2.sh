@@ -46,9 +46,9 @@ cd ../../
 rm -rf package/openclash
 
 # 修改frpc
-#git clone https://github.com/kuoruan/openwrt-upx.git package/openwrt-upx
-#rm -rf feeds/packages/lang/golang
-#mv files/golang feeds/packages/lang/
+git clone https://github.com/kuoruan/openwrt-upx.git package/openwrt-upx
+rm -rf feeds/packages/lang/golang
+mv files/golang feeds/packages/lang/
 rm -rf feeds/packages/net/frp
 mv files/frp feeds/packages/net/
 rm -rf feeds/luci/applications/luci-app-frpc
