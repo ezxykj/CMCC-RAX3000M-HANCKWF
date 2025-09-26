@@ -55,7 +55,7 @@ rm -rf feeds/luci/applications/luci-app-frpc
 rm -rf feeds/luci/applications/luci-app-frps
 mv files/frp/luci-app-frpc feeds/luci/applications/
 mv files/frp/luci-app-frps feeds/luci/applications/
-chmod -R 755 feeds/luci/applications/luci-app-frpc/
+#chmod -R 755 feeds/luci/applications/luci-app-frpc/
 #sed -i '/PKG_VERSION:=/c\PKG_VERSION:=0.61.2' feeds/packages/net/frp/Makefile   
 #sed -i '/PKG_HASH:=/c\PKG_HASH:=19600d944e05f7ed95bac53c18cbae6ce7eff859c62b434b0c315ca72acb1d3c' feeds/packages/net/frp/Makefile 
 
@@ -87,4 +87,5 @@ TARGET_DEVICES += cmcc_rax3000m-256m
 ' target/linux/mediatek/image/mt7981.mk
 
 # 添加luci-app-lucky
-git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
+mv files/lucky/lucky feeds/packages/net/
+mv files/lucky/luci-app-lucky feeds/luci/applications/
