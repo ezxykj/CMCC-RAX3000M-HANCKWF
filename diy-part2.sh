@@ -87,5 +87,4 @@ TARGET_DEVICES += cmcc_rax3000m-256m
 ' target/linux/mediatek/image/mt7981.mk
 
 # 添加luci-app-lucky
-mv files/lucky/lucky feeds/packages/net/
-mv files/lucky/luci-app-lucky feeds/luci/applications/
+git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
