@@ -90,4 +90,5 @@ TARGET_DEVICES += cmcc_rax3000m-256m
 git clone  https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
 
 # 添加网易云unblockneteasemusic
+rm -rf feeds/luci/applications/luci-app-unblockneteasemusic
 git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
