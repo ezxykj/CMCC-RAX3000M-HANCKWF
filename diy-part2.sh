@@ -87,5 +87,7 @@ TARGET_DEVICES += cmcc_rax3000m-256m
 ' target/linux/mediatek/image/mt7981.mk
 
 # 添加luci-app-lucky
-#git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
-git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
+git clone  https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
+
+# 添加网易云unblockneteasemusic
+git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
