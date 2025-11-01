@@ -36,7 +36,7 @@ env:
   UPLOAD_OUTPUT: true
 
 jobs:
-   _rax3000m_256m:
+   cmcc-rax3000m-256m:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
