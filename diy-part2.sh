@@ -65,7 +65,8 @@ mv files/frp/luci-app-frps feeds/luci/applications/
 
 # 添加cmcc-rax3000m-256m
 mv files/mt7981-cmcc-rax3000m-256m.dts target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
-mv files/mt7981-cmcc-rax3000m-256m.dtsi target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
+rm -rf target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dtsi
+mv files/mt7981-cmcc-rax3000m.dtsi target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
 sed -i '/^TARGET_DEVICES += cmcc_rax3000m$/a\
 \ndefine Device/cmcc_rax3000m-256m\
   DEVICE_VENDOR := CMCC\
@@ -86,9 +87,6 @@ endef\
 TARGET_DEVICES += cmcc_rax3000m-256m
 ' target/linux/mediatek/image/mt7981.mk
 
-#端口对应错误修正
-sed -i 's/label = "lan1"/label = "lan3"/g' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dtsi
-sed -i 's/label = "lan1"/label = "lan3"/g' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dtsi
 # 添加luci-app-lucky
 git clone  https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
 
