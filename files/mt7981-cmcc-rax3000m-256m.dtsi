@@ -37,12 +37,12 @@
 		reset {
 			label = "reset";
 			linux,code = <KEY_RESTART>;
-			gpios = <&pio 0 GPIO_ACTIVE_LOW>;
+			gpios = <&pio 1 GPIO_ACTIVE_LOW>;
 		};
 
 		mesh {
 			label = "mesh";
-			gpios = <&pio 1 GPIO_ACTIVE_LOW>;
+			gpios = <&pio 0 GPIO_ACTIVE_LOW>;
 			linux,code = <BTN_9>;
 			linux,input-type = <EV_SW>;
 		};
