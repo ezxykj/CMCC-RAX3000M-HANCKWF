@@ -68,7 +68,8 @@ mv files/mt7981-cmcc-rax3000m-256m.dts target/linux/mediatek/files-5.4/arch/arm6
 rm -rf target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dtsi
 mv files/mt7981-cmcc-rax3000m.dtsi target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
 sed -i '/^TARGET_DEVICES += cmcc_rax3000m$/a\
-\ndefine Device/cmcc_rax3000m-256m\
+\
+  define Device/cmcc_rax3000m-256m\
   DEVICE_VENDOR := CMCC\
   DEVICE_MODEL := RAX3000M NAND 256m\
   DEVICE_DTS := mt7981-cmcc-rax3000m-256m\
