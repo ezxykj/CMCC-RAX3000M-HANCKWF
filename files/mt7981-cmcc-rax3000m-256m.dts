@@ -3,7 +3,7 @@
 
 / {
 	model = "CMCC RAX3000M 256M";
-	compatible = "cmcc,rax3000m", "mediatek,mt7981";
+	compatible = "cmcc,rax3000m-256m", "mediatek,mt7981";
 
 	chosen {
 		bootargs = "console=ttyS0,115200n1 loglevel=8 \
