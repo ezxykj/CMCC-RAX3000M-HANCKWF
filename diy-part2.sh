@@ -94,4 +94,4 @@ git clone  https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
 # 添加网易云unblockneteasemusic
 rm -rf feeds/luci/applications/luci-app-unblockneteasemusic
 git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
-sed -i 's/+node//g' package/luci-app-unblockneteasemusic/Makefile
+#sed -i 's/+node//g' package/luci-app-unblockneteasemusic/Makefile
