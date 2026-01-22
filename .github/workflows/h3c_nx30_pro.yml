@@ -36,7 +36,7 @@ env:
   UPLOAD_OUTPUT: true
 
 jobs:
-   cmcc_rax3000m:
+   h3c_nx30_pro:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
