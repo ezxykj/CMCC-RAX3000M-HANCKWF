@@ -107,3 +107,8 @@ curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/precompiled/b
 curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/ca.crt -o $NAME/core/ca.crt
 curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/server.crt -o $NAME/core/server.crt
 curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/server.key -o $NAME/core/server.key
+
+#添加上网时间控制
+git clone https://github.com/gaobin89/luci-app-timecontrol package/luci-app-timecontrol
+sed -i '/$(eval $(call BuildPackage,$(PKG_NAME)))/s/^/#/' package/luci-app-timecontrol/luci-app-timecontrol/Makefile
+#sed -i 's/download-ci-llvm=true/download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
