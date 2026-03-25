@@ -69,12 +69,12 @@ rm -rf target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-
 mv files/mt7981-cmcc-rax3000m.dtsi target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
 sed -i '/^TARGET_DEVICES += cmcc_rax3000m$/a\
 \
-  define Device/cmcc_rax3000m-256m\
+define Device/cmcc_rax3000m-256m\
   DEVICE_VENDOR := CMCC\
-  DEVICE_MODEL := RAX3000M NAND 256m\
+  DEVICE_MODEL := RAX3000M NAND 256M\
   DEVICE_DTS := mt7981-cmcc-rax3000m-256m\
   DEVICE_DTS_DIR := $(DTS_DIR)/mediatek\
-  DEVICE_PACKAGES := $(MT7981_USB_PKGS) luci-app-ksmbd luci-i18n-ksmbd-zh-cn ksmbd-utils\
+  DEVICE_PACKAGES := $(MT7981_USB_PKGS) luci-app-samba4\
   SUPPORTED_DEVICES := cmcc,rax3000m-256m\
   UBINIZE_OPTS := -E 5\
   BLOCKSIZE := 128k\
