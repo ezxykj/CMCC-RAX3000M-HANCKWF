@@ -65,8 +65,8 @@ mv files/frp/luci-app-frps feeds/luci/applications/
 
 # 添加cmcc-rax3000m-256m
 mv files/mt7981-cmcc-rax3000m-256m.dts target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
-rm -rf target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dtsi
-mv files/mt7981-cmcc-rax3000m.dtsi target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
+#rm -rf target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dtsi
+#mv files/mt7981-cmcc-rax3000m.dtsi target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
 sed -i '/^TARGET_DEVICES += cmcc_rax3000m$/a\
 \
 define Device/cmcc_rax3000m-256m\
