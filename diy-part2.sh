@@ -11,8 +11,8 @@
 #
 
 # 修改IP(B类地址)和主机名
-sed -i 's/192.168.6.1/10.0.0.1/g' package/base-files/files/bin/config_generate
-sed -i 's/255.255.255.0/255.0.0.0/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.18.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/255.255.255.0/255.0.0.0/g' package/base-files/files/bin/config_generate
 # sed -i 's/ImmortalWrt/HOME/g' package/base-files/files/bin/config_generate
 
 # 修改登录密码为ezxykj
@@ -27,8 +27,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 #sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 
 #修改wifi名称（mtwifi-cfg）
-#sed -i 's/ImmortalWrt-2.4G/XYKJ/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
-#sed -i 's/ImmortalWrt-5G/XYKJ/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+sed -i 's/ImmortalWrt-2.4G/AP-2.4G/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+sed -i 's/ImmortalWrt-5G/AP-5G/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
 
 # 添加openclash
 rm -rf package/feeds/luci/luci-app-openclash
