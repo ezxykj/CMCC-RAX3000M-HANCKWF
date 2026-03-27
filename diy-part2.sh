@@ -131,5 +131,5 @@ define Device/h3c_nx30pro-112m \
   IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE) \
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata \
 endef \
-TARGET_DEVICES += h3c_nx30pro
+TARGET_DEVICES += h3c_nx30pro-112m
 ' target/linux/mediatek/image/mt7981.mk
