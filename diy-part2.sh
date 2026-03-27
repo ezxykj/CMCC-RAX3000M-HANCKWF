@@ -114,6 +114,7 @@ git clone https://github.com/gaobin89/luci-app-timecontrol package/luci-app-time
 sed -i '/$(eval $(call BuildPackage,$(PKG_NAME)))/s/^/#/' package/luci-app-timecontrol/luci-app-timecontrol/Makefile
 
 # h3c_nx30_pro_112m分区
+mv files/mt7981-h3c-nx30pro-112m.dts target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
 sed -i '/^TARGET_DEVICES += h3c_nx30pro$/a\
 \
 define Device/h3c_nx30pro-112m \
