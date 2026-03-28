@@ -3,7 +3,7 @@
 
 / {
 	model = "H3C NX30PRO 112M";
-	compatible = "h3c,nx30pro-112m", "mediatek,mt7981";
+	compatible = "h3c,nx30pro", "mediatek,mt7981";
 
 	aliases {
 		led-boot = &red_led;
