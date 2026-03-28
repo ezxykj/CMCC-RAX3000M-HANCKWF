@@ -135,4 +135,5 @@ define Device/h3c_nx30pro-112m \
 endef \
 TARGET_DEVICES += h3c_nx30pro-112m
 ' target/linux/mediatek/image/mt7981.mk
+# 初始化接口(network)
 sed -i 's/h3c,nx30pro/*h3c,nx30pro*/g' target/linux/mediatek/mt7981/base-files/etc/board.d/02_network
