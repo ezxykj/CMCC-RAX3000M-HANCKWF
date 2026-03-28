@@ -123,7 +123,7 @@ define Device/h3c_nx30pro-112m \
   DEVICE_MODEL := NX30PRO 112M \
   DEVICE_DTS := mt7981-h3c-nx30pro-112m \
   DEVICE_DTS_DIR := $(DTS_DIR)/mediatek \
-  SUPPORTED_DEVICES := h3c,nx30pro-112m \
+  SUPPORTED_DEVICES := h3c,nx30pro \
   UBINIZE_OPTS := -E 5 \
   BLOCKSIZE := 128k \
   PAGESIZE := 2048 \
