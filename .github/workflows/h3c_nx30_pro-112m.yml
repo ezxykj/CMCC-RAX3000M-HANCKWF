@@ -36,7 +36,7 @@ env:
   UPLOAD_OUTPUT: true
 
 jobs:
-   h3c_nx30_pro:
+   h3c_nx30_pro-112m:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
