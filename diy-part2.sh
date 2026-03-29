@@ -115,7 +115,7 @@ git clone https://github.com/gaobin89/luci-app-timecontrol package/luci-app-time
 sed -i '/$(eval $(call BuildPackage,$(PKG_NAME)))/s/^/#/' package/luci-app-timecontrol/luci-app-timecontrol/Makefile
 
 # h3c_nx30_pro_112m分区
-sed -i '/^define Device\/h3c_magic-nx30-pro-nmbm$/,/^endef$/{s/IMAGE_SIZE := 65536k/IMAGE_SIZE := 114688k/}' target/linux/mediatek/image/filogic.mk
-sed -i 's/model = "H3C Magic NX30 Pro (NMBM layout)"/model = "H3C Magic NX30 Pro 112m (NMBM layout)"/' target/linux/mediatek/dts/mt7981b-h3c-magic-nx30-pro-nmbm.dts
-sed -i 's/reg = <0x0580000 0x4000000>/reg = <0x0580000 0x7000000>/' target/linux/mediatek/dts/mt7981b-h3c-magic-nx30-pro.dts
-sed -i '155,179d' target/linux/mediatek/dts/mt7981b-h3c-magic-nx30-pro.dts
+sed -i '/^define Device\/h3c_nx30pro$/,/^endef$/{s/IMAGE_SIZE := 65536k/IMAGE_SIZE := 114688k/}' target/linux/mediatek/image/mt7981.mk
+sed -i 's/model = "H3C NX30PRO"/model = "H3C NX30PRO 112M"/' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
+sed -i 's/reg = <0x580000 0x4000000>/reg = <0x580000 0x7000000>/' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
+sed -i '94,114d' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
