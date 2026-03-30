@@ -119,6 +119,3 @@ sed -i '/^define Device\/h3c_nx30pro$/,/^endef$/{s/IMAGE_SIZE := 65536k/IMAGE_SI
 sed -i 's/model = "H3C NX30PRO"/model = "H3C NX30PRO 112M"/' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
 sed -i 's/reg = <0x580000 0x4000000>/reg = <0x580000 0x7000000>/' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
 sed -i '94,114d' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
-sed -i 's/lan1/lan4/' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
-sed -i 's/lan3/lan1/' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
-sed -i 's/lan4/lan3/' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
