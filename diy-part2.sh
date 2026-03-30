@@ -116,6 +116,7 @@ sed -i '/$(eval $(call BuildPackage,$(PKG_NAME)))/s/^/#/' package/luci-app-timec
 
 # h3c_nx30_pro_112m分区
 sed -i '/^define Device\/h3c_nx30pro$/,/^endef$/{s/IMAGE_SIZE := 65536k/IMAGE_SIZE := 114688k/}' target/linux/mediatek/image/mt7981.mk
+sed -i 's/define Device\/h3c_nx30pro/define Device\/h3c_nx30pro-112m/' target/linux/mediatek/image/mt7981.mk
 sed -i 's/model = "H3C NX30PRO"/model = "H3C NX30PRO 112M"/' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
 sed -i 's/reg = <0x580000 0x4000000>/reg = <0x580000 0x7000000>/' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
 sed -i '94,114d' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-h3c-nx30pro.dts
