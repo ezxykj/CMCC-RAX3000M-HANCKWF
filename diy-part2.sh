@@ -85,6 +85,9 @@ endef \
 TARGET_DEVICES += cmcc_rax3000m-256m
 ' target/linux/mediatek/image/mt7981.mk
 mv files/dts/mt7981-cmcc-rax3000m-256m.dts target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
+sed -i 's/label = "lan1"/label = "lan_tmp/"' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dtsi
+sed -i 's/label = "lan3"/label = "lan1/"' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dtsi
+sed -i 's/label = "lan_tmp"/label = "lan3/"' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m.dtsi
 
 # 添加luci-app-lucky
 git clone  https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
