@@ -11,7 +11,7 @@
 #
 
 # 修改IP(B类地址)和主机名
-sed -i 's/192.168.6.1/192.168.54.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.6.1/192.168.54.254/g' package/base-files/files/bin/config_generate
 #sed -i 's/255.255.255.0/255.0.0.0/g' package/base-files/files/bin/config_generate
 # sed -i 's/ImmortalWrt/HOME/g' package/base-files/files/bin/config_generate
 
