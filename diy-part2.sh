@@ -59,6 +59,9 @@ mv files/frp/luci-app-frps feeds/luci/applications/
 #sed -i '/PKG_VERSION:=/c\PKG_VERSION:=0.61.2' feeds/packages/net/frp/Makefile   
 #sed -i '/PKG_HASH:=/c\PKG_HASH:=19600d944e05f7ed95bac53c18cbae6ce7eff859c62b434b0c315ca72acb1d3c' feeds/packages/net/frp/Makefile 
 
+#修改iptv
+sed -i 's/${vendorid:+-V "$vendorid"}/${vendorid:+-V "" "-x 0x3c:$vendorid"}/g' package/network/config/netifd/files/lib/netifd/proto/dhcp.sh
+
 # 修改appfilter->oaf
 #rm -rf feeds/luci/applications/luci-app-appfilter
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
