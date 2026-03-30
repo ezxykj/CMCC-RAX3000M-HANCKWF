@@ -64,7 +64,6 @@ mv files/frp/luci-app-frps feeds/luci/applications/
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 添加cmcc-rax3000m-256m
-mv files/dts/mt7981-cmcc-rax3000m-256m.dts target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
 sed -i '/^TARGET_DEVICES += cmcc_rax3000m$/a\
 \
 define Device/cmcc_rax3000m-256m \
@@ -85,6 +84,7 @@ define Device/cmcc_rax3000m-256m \
 endef \
 TARGET_DEVICES += cmcc_rax3000m-256m
 ' target/linux/mediatek/image/mt7981.mk
+mv files/dts/mt7981-cmcc-rax3000m-256m.dts target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
 
 # 添加luci-app-lucky
 git clone  https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
