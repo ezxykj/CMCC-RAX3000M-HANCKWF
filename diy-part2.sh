@@ -68,7 +68,7 @@ sed -i '/^TARGET_DEVICES += cmcc_rax3000m$/a\
 \
 define Device/cmcc_rax3000m-256m\
   DEVICE_VENDOR := CMCC\
-  DEVICE_MODEL := RAX3000M NAND (with 256M flash)\
+  DEVICE_MODEL := RAX3000M NAND (with 512M Flash)\
   DEVICE_DTS := mt7981-cmcc-rax3000m-256m\
   DEVICE_DTS_DIR := $(DTS_DIR)/mediatek\
   DEVICE_PACKAGES := $(MT7981_USB_PKGS) luci-app-ksmbd luci-i18n-ksmbd-zh-cn ksmbd-utils\
