@@ -138,3 +138,9 @@ endef\
 TARGET_DEVICES += h3c_nx30pro-112m
 ' target/linux/mediatek/image/mt7981.mk
 mv files/dts/mt7981-h3c-nx30pro-112m.dts target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/
+
+export PATH="/opt/hostedtoolcache/node/20.19.0/x64/bin:$PATH"
+echo "===== 检查Node版本 ====="
+node -v
+npm -v
+which node
