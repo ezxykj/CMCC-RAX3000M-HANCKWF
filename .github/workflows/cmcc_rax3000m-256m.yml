@@ -26,7 +26,7 @@ on:
 
 env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x
-  REPO_BRANCH: --depth=1 
+  REPO_BRANCH: openwrt-21.02 
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: cmcc_rax3000m-256m.config
   DIY_P1_SH: diy-part1.sh
@@ -99,7 +99,7 @@ jobs:
       working-directory: /mnt/workdir
       run: |
         df -hT $PWD
-        git clone $REPO_BRANCH $REPO_URL openwrt
+        git clone -b $REPO_BRANCH --depth=1 $REPO_URL openwrt
         ln -sf /mnt/workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: 加载feeds
