@@ -60,10 +60,7 @@ jobs:
         large-packages: true
         swap-storage: true
 
-    - name: Setup Node.js 20
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
+    # 【修改】移除了 actions/setup-node，因为后面用 NodeSource 安装更可靠
 
     - name: 初始化环境
       env:
@@ -82,7 +79,7 @@ jobs:
         sudo chown $USER:$GROUPS /mnt/workdir
         curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
         sudo apt-get install -y nodejs
-        node -v
+        echo "系统 Node 版本: $(node -v)"
 
     - name: 检查服务器配置
       if: (!cancelled())
@@ -147,6 +144,38 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
+
+    # 【新增】编译 host 工具（包括 node）
+    - name: 编译 host 工具
+      run: |
+        cd openwrt
+        make tools/install V=s || true
+        echo "=== 编译后的 Node 版本 ==="
+        staging_dir/host/bin/node -v || echo "node 不存在"
+
+    # 【新增】强制替换 Node.js 为系统版本
+    - name: 强制替换 Node.js
+      run: |
+        cd openwrt
+        
+        echo "=== 替换前 ==="
+        staging_dir/host/bin/node -v || echo "不存在"
+        
+        # 强制替换为系统 Node 20
+        sudo ln -sf /usr/bin/node staging_dir/host/bin/node
+        sudo ln -sf /usr/bin/npm staging_dir/host/bin/npm
+        sudo ln -sf /usr/bin/npx staging_dir/host/bin/npx
+        
+        # 同时替换 STAGING_DIR_HOSTPKG（如果有）
+        if [ -d staging_dir/hostpkg/bin ]; then
+          sudo ln -sf /usr/bin/node staging_dir/hostpkg/bin/node
+          sudo ln -sf /usr/bin/npm staging_dir/hostpkg/bin/npm
+          sudo ln -sf /usr/bin/npx staging_dir/hostpkg/bin/npx
+        fi
+        
+        echo "=== 替换后 ==="
+        staging_dir/host/bin/node -v
+        staging_dir/host/bin/npm -v
 
     - name: 编译固件
       run: |
