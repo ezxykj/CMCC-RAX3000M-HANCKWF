@@ -60,8 +60,6 @@ jobs:
         large-packages: true
         swap-storage: true
 
-    # 【修改】移除了 actions/setup-node，因为后面用 NodeSource 安装更可靠
-
     - name: 初始化环境
       env:
         DEBIAN_FRONTEND: noninteractive
